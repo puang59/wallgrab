@@ -11,7 +11,13 @@ prompt_input() {
 # Function to download wallpapers
 download_wallpapers() {
     local response="$1"
-    local threshold="$2"
+    # local threshold="$2"
+
+    THRESHOLD=$(prompt_input "Enter the number of wallpapers you want to download")
+    if [[ "$THRESHOLD" == "skip" ]]; then
+        THRESHOLD=0
+    fi
+
     local counter=0
 
     echo "$response" | jq -c '.data[]' | while read -r row; do
@@ -20,8 +26,8 @@ download_wallpapers() {
             ((counter++))
             mkdir -p ~/wallpapers
             wget -q --show-progress -P ~/wallpapers "$IMAGE_URL"
-            if [[ $counter -eq $threshold ]]; then
-                break
+            if [[ $counter -eq $THRESHOLD ]]; then
+                break  # Exit the loop once threshold is reached
             fi
         fi
     done
@@ -42,10 +48,10 @@ PAGE=$(prompt_input "Enter page (e.g., 1)")
 SEED=$(prompt_input "Enter seed (optional)")
 
 # Prompt user for threshold
-THRESHOLD=$(prompt_input "Enter the number of wallpapers you want to download")
-if [[ "$THRESHOLD" == "skip" ]]; then
-    THRESHOLD=0
-fi
+# THRESHOLD=$(prompt_input "Enter the number of wallpapers you want to download")
+# if [[ "$THRESHOLD" == "skip" ]]; then
+#     THRESHOLD=0
+# fi
 
 # Base API endpoint
 BASE_URL="https://wallhaven.cc/api/v1/search"
