@@ -72,3 +72,7 @@ To change this behaviour, just modify [this line](https://github.com/puang59/wal
 ```bash
     mkdir -p ~/wallpapers
 ```
+
+## License
+This project is licensed under [GPL-3.0](./LICENSE).
+
