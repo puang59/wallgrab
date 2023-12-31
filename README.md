@@ -61,8 +61,7 @@ Note: Detailed description is available [here](https://wallhaven.cc/help/api)
 ## Output
 
 The downloaded wallpapers will be saved in the `~/wallpapers` directory by default.
-To change this behaviour, just modify [line 21](https://github.com)
-
+To change this behaviour, just modify [this line](https://github.com/puang59/wallgrab/blob/ad6beaca67fd572f08366e98a65a9efc56cfa1e9/wallgrab.sh#L27).
 ```bash
     mkdir -p ~/wallpapers
 ```
