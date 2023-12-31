@@ -2,6 +2,12 @@
 
 This tool is designed to fetch and download wallpapers from [Wallhaven](https://wallhaven.cc) based on various user-defined parameters. It uses the Wallhaven API to search for wallpapers and downloads them to the user's local system.
 
+##
+
+<p align="center">
+<img src="./media/preview.gif" alt="Video Preview" width="500px">
+</p>
+
 ## Features
 
 - **Interactive User Input**: The script prompts the user for various parameters like search query, categories, purity, sorting options, resolutions, and more.
@@ -62,6 +68,7 @@ Note: Detailed description is available [here](https://wallhaven.cc/help/api)
 
 The downloaded wallpapers will be saved in the `~/wallpapers` directory by default.
 To change this behaviour, just modify [this line](https://github.com/puang59/wallgrab/blob/ad6beaca67fd572f08366e98a65a9efc56cfa1e9/wallgrab.sh#L27).
+
 ```bash
     mkdir -p ~/wallpapers
 ```
