@@ -27,7 +27,7 @@ download_wallpapers() {
             mkdir -p ~/wallpapers
             wget -q --show-progress -P ~/wallpapers "$IMAGE_URL"
             if [[ $counter -eq $THRESHOLD ]]; then
-                break  # Exit the loop once threshold is reached
+                break  
             fi
         fi
     done
