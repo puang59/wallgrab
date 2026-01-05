@@ -1,7 +1,7 @@
 # wallgrab
 
 
-<a href="https://app.devdoq.com/dashboard/737614683?name=wallgrab&fullName=puang59%2Fwallgrab&tab=document"><img src="https://app.devdoq.com/shields/read_docs.png" alt="Read Docs" width="120" height="45"></a>
+<a href="https://app.devdoq.com/dashboard/737614683?name=wallgrab&fullName=puang59%2Fwallgrab&tab=document"><img src="https://app.devdoq.com/shields/read_docs.png" alt="Read Docs" width="120" height="45"></a> <a href="https://app.devdoq.com/dashboard/737614683?name=wallgrab&fullName=puang59%2Fwallgrab&tab=chat"><img src="https://app.devdoq.com/shields/talk_to_code.png" alt="Talk to Code" width="165" height="60"></a>
 
 This tool is designed to fetch and download wallpapers from [Wallhaven](https://wallhaven.cc) based on various user-defined parameters. It uses the Wallhaven API to search for wallpapers and downloads them to the user's local system.
 
