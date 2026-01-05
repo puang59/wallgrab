@@ -1,81 +1,74 @@
-# wallgrab
+# About
 
+`wallgrab` is a command-line tool for downloading wallpapers from wallhaven.cc. Easily fetch images using custom search criteria like tags, resolutions, aspect ratios, and more. Streamline your wallpaper collection process with this simple, scriptable solution.
 
-<a href="https://app.devdoq.com/dashboard/737614683?name=wallgrab&fullName=puang59%2Fwallgrab&tab=document"><img src="https://app.devdoq.com/shields/read_docs.png" alt="Read Docs" width="120" height="45"></a> <a href="https://app.devdoq.com/dashboard/737614683?name=wallgrab&fullName=puang59%2Fwallgrab&tab=chat"><img src="https://app.devdoq.com/shields/talk_to_code.png" alt="Talk to Code" width="165" height="60"></a>
+## Built With
 
-This tool is designed to fetch and download wallpapers from [Wallhaven](https://wallhaven.cc) based on various user-defined parameters. It uses the Wallhaven API to search for wallpapers and downloads them to the user's local system.
+*   **Bash:** For scripting the core logic and automation.
+*   **curl:** To fetch data from APIs.
+    *   Example: `curl -s "https://api.example.com/wallpapers?q=nature"`
+*   **jq:** To parse and filter JSON responses from APIs.
+    *   Example: `echo '{"data": [...] }' | jq -e '.data'`
+*   **wget:** For downloading wallpaper files.
+    *   Example: `wget -P ./downloads "https://example.com/image.jpg"`
 
-##
+## Getting Started
 
-<p align="center">
-<img src="./media/preview.gif" alt="Video Preview" width="500px">
-</p>
+Before you begin, ensure you have the following tools installed:
 
-## Features
+*   **Bash:** For running the script.
+*   **curl:** For making API requests.
+*   **jq:** For parsing JSON responses.
+*   **wget:** For downloading files.
 
-- **Interactive User Input**: The script prompts the user for various parameters like search query, categories, purity, sorting options, resolutions, and more.
-- **Customizable Downloads**: Users can specify the number of wallpapers they want to download.
-- **Flexible Parameters**: Supports a wide range of search parameters available on Wallhaven.
+### Installation
 
-## Requirements
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/yourusername/wallgrab.git
+    cd wallgrab
+    ```
 
-- `jq` (A lightweight and flexible command-line JSON processor)
-- `wget` (For downloading the wallpapers)
-- `curl` (For sending HTTP requests)
+2.  **Make the script executable:**
+    ```bash
+    chmod +x wallgrab.sh
+    ```
 
-## How to Use
+## Usage
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/puang59/wallgrab.git
-   ```
-2. **Navigate to the Directory**:
+Run the script from your terminal and follow the prompts to customize your wallpaper download.
 
-   ```bash
-   cd wallgrab
-   ```
+*   **Search Query:** Enter keywords to find wallpapers.
+*   **Categories:** Specify wallpaper categories (e.g., `100` for on, `0` for off).
+*   **Purity:** Filter by purity levels (e.g., `110` for SFW and NSFW).
+*   **Sorting:** Choose how to sort results (e.g., `date_added`, `relevance`).
+*   **Order:** Select ascending (`asc`) or descending (`desc`) order.
+*   **Number of Wallpapers:** Specify how many wallpapers you want to download.
 
-3. **Make the Script Executable**:
-
-   ```bash
-   chmod +x wallgrab.sh
-   ```
-
-4. **Run the Script**:
-
-   ```bash
-   ./wallgrab.sh
-   ```
-
-5. **Follow the On-Screen Prompts**: Answer the prompts to specify your search criteria.
-
-## Parameters
-
-- **Query**: Enter keywords/tags for the wallpapers.
-- **Categories**: Specify the categories (e.g., general, anime, people).
-- **Purity**: Choose the purity level (e.g., sfw, sketchy, nsfw).
-- **Sorting**: Select the sorting method (e.g., date added, relevance, random).
-- **Order**: Choose the order (ascending or descending).
-- **Top Range**: Specify the time range for top wallpapers (e.g., 1d, 3d, 1w).
-- **At Least Resolution**: Specify the minimum resolution (e.g., 1920x1080).
-- **Resolutions**: Specify resolutions (comma-separated).
-- **Ratios**: Specify aspect ratios (e.g., 16x9, 16x10).
-- **Colors**: Specify colors (comma-separated hex codes).
-- **Page**: Specify the page number for pagination.
-- **Seed**: (Optional) Specify a seed for random results.
-- **Threshold**: Specify the number of wallpapers to download.
-
-Note: Detailed description is available [here](https://wallhaven.cc/help/api)
-
-## Output
-
-The downloaded wallpapers will be saved in the `~/wallpapers` directory by default.
-To change this behaviour, just modify [this line](https://github.com/puang59/wallgrab/blob/ad6beaca67fd572f08366e98a65a9efc56cfa1e9/wallgrab.sh#L27).
+**Example:**
 
 ```bash
-    mkdir -p ~/wallpapers
+./wallgrab.sh
 ```
 
-## License
+You will then be guided through a series of prompts to define your download parameters.
 
-This project is licensed under [GPL-3.0](./LICENSE).
+## Contributing
+
+Contributions are welcome!
+
+*   **Issues:** Please open an issue to discuss any proposed changes or report bugs.
+*   **Pull Requests:** Submit a pull request with your improvements. Ensure your code adheres to existing standards.
+
+## Prerequisites
+
+Ensure you have the following command-line tools installed on your system:
+
+*   **Bash:** For running the script.
+*   **curl:** To fetch data from the API.
+*   **jq:** To parse JSON responses.
+*   **wget:** For downloading files.
+
+---
+
+*This README was generated by [DevDoq](https://devdoq.com)*
