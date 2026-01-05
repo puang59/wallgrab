@@ -1,5 +1,8 @@
 # wallgrab
 
+
+[![Read Docs](https://app.devdoq.com/shields/read_docs.png)](https://app.devdoq.com/dashboard/737614683?name=wallgrab&fullName=puang59%2Fwallgrab&tab=document)
+
 This tool is designed to fetch and download wallpapers from [Wallhaven](https://wallhaven.cc) based on various user-defined parameters. It uses the Wallhaven API to search for wallpapers and downloads them to the user's local system.
 
 ##
